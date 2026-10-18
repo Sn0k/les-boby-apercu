@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="site/favicon.png">
+<title>Aperçu du site BOBY</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* Une fiche posée sur la table du club : papier, encre noire, un seul bouton. Une seule ambiance, comme le site. */
+:root {
+  --papier: #EBE7DE;
+  --blanc: #F3F1EC;
+  --noir: #0D0D0D;
+  --bleu: #0A2A85;
+  --rouge: #D90D2B;
+  --f-titre: var(--font-anton);
+  --f-texte: var(--font-archivo);
+  --f-mono: var(--font-mono);
+}
+@font-face{font-family:Anton-d6f7802c8beca2ae;src:url("site/_astro/fonts/89ef49ec808f1742.woff2") format("woff2");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Anton-d6f7802c8beca2ae fallback: Arial";src:local("Arial");font-display:swap;font-weight:400;font-style:normal;size-adjust:90.69%;ascent-override:129.7022%;descent-override:36.2886%;line-gap-override:0%;}:root{--font-anton:Anton-d6f7802c8beca2ae,"Anton-d6f7802c8beca2ae fallback: Arial",sans-serif;}
+@font-face{font-family:"Archivo Narrow-dd341880a1f64470";src:url("site/_astro/fonts/058cc24abf2a011d.woff2") format("woff2");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Archivo Narrow-dd341880a1f64470";src:url("site/_astro/fonts/993151702e09c60f.woff2") format("woff2");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Archivo Narrow-dd341880a1f64470";src:url("site/_astro/fonts/75ccfb045a76cd3b.woff2") format("woff2");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Archivo Narrow-dd341880a1f64470 fallback: Arial";src:local("Arial");font-display:swap;font-weight:500;font-style:normal;size-adjust:84.3426%;ascent-override:122.7138%;descent-override:36.992%;line-gap-override:0%;}@font-face{font-family:"Archivo Narrow-dd341880a1f64470 fallback: Arial";src:local("Arial");font-display:swap;font-weight:600;font-style:normal;size-adjust:84.3426%;ascent-override:122.7138%;descent-override:36.992%;line-gap-override:0%;}@font-face{font-family:"Archivo Narrow-dd341880a1f64470 fallback: Arial Bold";src:local("Arial Bold");font-display:swap;font-weight:700;font-style:normal;size-adjust:78.3365%;ascent-override:132.1223%;descent-override:39.8282%;line-gap-override:0%;}:root{--font-archivo:"Archivo Narrow-dd341880a1f64470","Archivo Narrow-dd341880a1f64470 fallback: Arial","Archivo Narrow-dd341880a1f64470 fallback: Arial Bold",sans-serif;}
+@font-face{font-family:"JetBrains Mono-3f647877440d444b";src:url("site/_astro/fonts/5f110307a7f6aeca.woff2") format("woff2");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"JetBrains Mono-3f647877440d444b fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:102.0166%;descent-override:30.0049%;}:root{--font-mono:"JetBrains Mono-3f647877440d444b","JetBrains Mono-3f647877440d444b fallback: Courier New",monospace;}
+body { margin: 0; background: var(--papier); color: var(--noir); font: 500 1.0625rem/1.55 var(--f-texte); }
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding-block: 48px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 32px;
+}
+.tete { display: flex; align-items: center; gap: 20px; }
+.tete img { width: 88px; height: 88px; object-fit: contain; flex: none; }
+.etiquette {
+  margin: 0 0 8px;
+  display: flex; align-items: center; gap: 8px;
+  font: 500 0.75rem/1.3 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.etiquette::before { content: ""; width: 10px; height: 10px; background: var(--rouge); flex: none; }
+h1 { margin: 0; font: 400 clamp(2.4rem, 8vw, 3.6rem)/0.95 var(--f-titre); text-transform: uppercase; text-wrap: balance; }
+.chapo { margin: 0; font-size: 1.2rem; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.bouton {
+  display: inline-block; padding: 14px 22px;
+  background: var(--bleu); color: var(--blanc);
+  font: 700 1rem/1.2 var(--f-texte); text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none;
+}
+.bouton:hover { background: var(--noir); }
+.raccourcis { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 500 0.8rem/1.4 var(--f-mono); }
+.raccourcis a { color: var(--noir); }
+a:focus-visible { outline: 3px solid var(--rouge); outline-offset: 3px; }
+section { display: grid; gap: 10px; padding-top: 16px; border-top: 2px solid var(--noir); }
+h2 { margin: 0; font: 700 0.95rem/1.2 var(--f-texte); text-transform: uppercase; letter-spacing: 0.08em; }
+ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+section p { margin: 0; }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="tete">
+    <img src="site/logo.png" alt="Logo des BOBY" width="88" height="88">
+    <div>
+      <p class="etiquette">Aperçu de travail, octobre 2026</p>
+      <h1>Le site des BOBY</h1>
+    </div>
+  </header>
+  <p class="chapo">Le site tel qu'il est aujourd'hui, avant sa mise en ligne. Toutes les pages sont cliquables. Faites-en le tour, puis dites ce qui vous plaît et ce qui coince.</p>
+  <div class="actions">
+    <a class="bouton" href="site/index.html">Ouvrir le site</a>
+    <nav class="raccourcis" aria-label="Pages du site">
+      <a href="site/guides/index.html">Guides</a>
+      <a href="site/tips/index.html">Tips</a>
+      <a href="site/competitif/index.html">Compétitif</a>
+    </nav>
+  </div>
+  <section>
+    <h2>Encore provisoire</h2>
+    <ul>
+      <li>Le lien Discord, le lien Tipeee, le nom et l'ID du serveur sont des exemples.</li>
+      <li>Les 5 guides et les 6 tips sont des premières versions. Certains chiffres restent à vérifier en jeu.</li>
+      <li>Le règlement et les mentions légales sont à compléter.</li>
+      <li>Le nom de domaine n'est pas encore choisi.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>À fournir pour la mise en ligne</h2>
+    <ul>
+      <li>Une invitation Discord réglée pour ne jamais expirer, et le lien Tipeee.</li>
+      <li>Le nom exact et l'ID du serveur BOBY.</li>
+      <li>Le règlement du Discord.</li>
+      <li>Qui signe le site comme éditeur, dans les mentions légales.</li>
+      <li>Le logo en grand format, si vous l'avez.</li>
+      <li>Une relecture des guides par des joueurs de la commu.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Plus tard</h2>
+    <p>Les stats du serveur et les profils de joueurs arriveront dans un deuxième temps.</p>
+  </section>
+</main>
+</body>
+</html>
